@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Carlos Gamboa">
+    <script src="https://kit.fontawesome.com/6e93cbcb8a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <title>Implementos Deportivos CJ</title>
+</head>
+
+<body>
+    <section class="contenedor__main">
+        <section class="contenedor">
+            <section class="formulario">
+                <div>
+                    <h2>Iniciar Sesión</h2>
+                    <div class="input__contenedor">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="input-usuario" required autocomplete="off">
+                        <label for="#">Email</label>
+                    </div>
+
+                    <div class="input__contenedor">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="input-clave" required autocomplete="off">
+                        <label for="#">Password</label>
+                    </div>
+
+                    <div class="boton__contenedor">
+                        <button onclick="ingresar()" type="button" class="btn">Ingresar</button>
+                        <button onclick="clean()" type="button" class="btn">Borrar</button>
+                    </div>
+                </div>
+                <br>
+                <p id="corre"></p>
+            </section>
+        </section>
+    </section>
+
+    <script src="./js/js.js" text="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Carlos Gamboa">
+    <link rel="stylesheet" href="./css/secondpage.css" />
+    <title>Implementos Deportivos CJ</title>
+</head>
+
+<body>
+
+	<header class="header">
+		
+		<img src="./css/images/logo.png" alt="logo">
+		
+	</header>
+    
+    <section class ="productos__main">
+		
+		<section class="tienda">
+			<section class="informacion">
+				<div id="sidebar" class="sidebar">
+					<ul>
+						<li><img id="image" /></li>
+						<li>ID: <input type="text" id="id"></li>
+						<li>Nombre: <input type="text" id="nombre"></li>
+						<li>Categoria: <input type="text" id="categoria"></li>
+						<li>Medidas: <input type="text" id="medidas"></li>
+						<li>Precio: <input type="text" id="precio"></li>
+						<li>Descripción: <input type="text" id="descripcion"></li>
+						<li>Garantia: <input type="text" id="garantia"></li>
+						<li>Marca: <input type="text" id="marca"></li>
+						<li>Peso: <input type="text" id="peso"></li>
+						<li>Stock: <input type="text" id="stock"></li>
+
+						<button onclick="actualizar()" class="btn">Actualizar</button>
+						<button onclick="atras()" class="btn">Atrás</button>
+					</ul>	
+				</div>
+
+				<section class="filtros">
+					<section class="filtro__uno">
+						<label for="categoria">Filtrar por categoría:</label>
+						<select name="categoria" id="categor">
+							<option value=""></option>
+							<option value="Cardio">Cardio</option>
+							<option value="Funcional">Funcional</option>
+							<option value="Fuerza">Fuerza</option>
+							<option value="Yoga">Yoga</option>
+							<option value="Boxeo/MMA">Boxeo/MMA</option>
+						</select>
+					</section>
+					
+					<section class="filtro__dos">
+						<label for="precio">Filtrar por Precio:</label>
+						<label><input class="radiobuton" type="radio" name="preciofilter" value="rango1"> 0 - 2000000</label>
+						<label><input class="radiobuton" type="radio" name="preciofilter" value="rango2"> 2000001 - 4000000 </label>
+						<label><input class="radiobuton" type="radio" name="preciofilter" value="rango3"> 4000001 - 6000000 </label>
+						<label><input class="radiobuton" type="radio" name="preciofilter" value="rango4"> 6000001 - 8000000</label>
+						<label><input class="radiobuton" type="radio" name="preciofilter" value="rango5"> &gt; 8000001 </label>
+					</section>
+					
+					<button onclick="filtrarProductos()" class="btn">Filtrar</button>
+					<button onclick ="cleanAll()" class="btn">Limpiar</button>
+	
+				</section>
+	
+				<section class="lista__productos">
+					<div class="item">
+						<img id="image0" />
+						<div class="info">
+							<p id="id0"><b>ID:</b></p>
+							<p id="nombre0"><b>Nombre:</b></p>
+							<p id="categoria0"><b>Categoria:</b></p>
+							<p id="medidas0"><b>Medidas:</b></p>
+							<p id="precio0"><b>Precio:</b></p>
+							<button onclick="verDetalles(0)" class="btn">Ver más...</button>
+						</div>	
+					</div>
+
+					<div class="item">
+						<img id="image1" />
+						<div class="info">
+							<p id="id1"><b>ID:</b></p>
+							<p id="nombre1"><b>Nombre:</b></p>
+							<p id="categoria1"><b>Categoria:</b></p>
+							<p id="medidas1"><b>Medidas:</b></p>
+							<p id="precio1"><b>Precio:</b></p>
+							<button onclick="verDetalles(1)" class="btn">Ver más...</button>
+						</div>						
+					</div>
+
+					<div class="item">
+						<img id="image2" />
+						<div class="info">
+							<p id="id2"><span class="textBold">ID:</span></p>
+							<p id="nombre2"><span class="textBold">Nombre:</span></p>
+							<p id="categoria2"><span class="textBold">Categoria:</span></p>
+							<p id="medidas2"><span class="textBold">Medidas:</span></p>
+							<p id="precio2"><span class="textBold">Precio:</span></p>
+							<button onclick="verDetalles(2)" class="btn">Ver más...</button>
+						</div>
+					</div>
+
+					<div class="item">
+						<img id="image3" />
+						<div class="info">
+							<p id="id3"><b>ID:</b></p>
+							<p id="nombre3"><b>Nombre:</b></p>	
+							<p id="categoria3"><b>Categoria:</b></p>
+							<p id="medidas3"><b>Medidas:</b></p>
+							<p id="precio3"><b>Precio:</b></p>
+							<button onclick="verDetalles(3)" class="btn">Ver más...</button>
+						</div>
+					</div>
+
+					<div class="item">
+						<img id="image4" />
+						<div class="info">
+							<p id="id4"><b>ID:</b></p>
+							<p id="nombre4"><b>Nombre:</b></p>
+							<p id="categoria4"><b>Categoria:</b></p>
+							<p id="medidas4"><b>Medidas:</b></p>
+							<p id="precio4"><b>Precio:</b></p>
+							<button onclick="verDetalles(4)" class="btn">Ver más...</button>
+						</div>						
+					</div>
+
+					<div class="item">
+						<img id="image5" />
+						<div class="info">
+							<p id="id5"><b>ID:</b></p>
+							<p id="nombre5"><b>Nombre:</b></p>
+							<p id="categoria5"><b>Categoria:</b></p>
+							<p id="medidas5"><b>Medidas:</b></p>
+							<p id="precio5"><b>Precio:</b></p>
+							<button onclick="verDetalles(5)" class="btn">Ver más...</button>
+						</div>
+					</div>
+
+					<div class="item">
+						<img id="image6" />
+						<div class="info">
+							<p id="id6"><b>ID:</b></p>
+							<p id="nombre6"><b>Nombre:</b></p>
+							<p id="categoria6"><b>Categoria:</b></p>
+							<p id="medidas6"><b>Medidas:</b></p>
+							<p id="precio6"><b>Precio:</b></p>
+							<button onclick="verDetalles(6)" class="btn">Ver más...</button>
+						</div>
+					</div>
+
+					<div class="item">
+						<img id="image7" />
+						<div class="info">
+							<p id="id7"><b>ID:</b></p>
+							<p id="nombre7"><b>Nombre:</b></p>
+							<p id="categoria7"><b>Categoria:</b></p>
+							<p id="medidas7"><b>Medidas:</b></p>
+							<p id="precio7"><b>Precio:</b></p>
+							<button onclick="verDetalles(7)" class="btn">Ver más...</button>
+						</div>
+					</div>
+
+					<div class="item">
+						<img id="image8" />
+						<div class="info">
+							<p id="id8"><b>ID:</b></p>
+							<p id="nombre8"><b>Nombre:</b></p>
+							<p id="categoria8"><b>Categoria:</b></p>
+							<p id="medidas8"><b>Medidas:</b></p>
+							<p id="precio8"><b>Precio:</b></p>
+							<button onclick="verDetalles(8)" class="btn">Ver más...</button>
+						</div>
+					</div>
+
+					<div class="item">
+						<img id="image9" />
+						<div class="info">
+							<p id="id9"><b>ID:</b></p>
+							<p id="nombre9"><b>Nombre:</b></p>
+							<p id="categoria9"><b>Categoria:</b></p>
+							<p id="medidas9"><b>Medidas:</b></p>
+							<p id="precio9"><b>Precio:</b></p>
+							<button onclick="verDetalles(9)" class="btn">Ver más...</button>
+						</div>
+					</div>
+		
+				</section>
+			
+			</section>
+			<section class="paginacion">
+				<button onclick="anterior()" id = "btn_anterior" class="btn">Anterior</button>
+				<span id="currentPage">1</span>
+				<button onclick="siguiente()" id = "btn_siguiente" class="btn">Siguiente</button>
+			</section>
+		</section>
+    </section>
+
+	<footer class="footer">
+		<p>Todos los derechos reservados &copy; 2023 - Carlos Gamboa. </p>
+	</footer>
+
+    <script src="./js/secondpage.js" text="text/javascript"></script>
+</body>
+</html>
